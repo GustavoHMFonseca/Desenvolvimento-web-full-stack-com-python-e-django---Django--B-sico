@@ -8,9 +8,20 @@ utilizando o html e css(template)
 from django.http import HttpResponse
 
 
-def pagina_produtos(request):
-    return HttpResponse('Página de produtos')
+def index(request):
+    # processamento, banco de dados
+    context = {
+        'nome': 'Gustavo Fonseca',
+        'ultimo_acesso': '10/10/2030',
+        'idade':15,
+        'produtos': [
+            {'nome': 'Notebook Acer', 'preco': '1.200,00'},
+            {'nome': 'Iphone', 'preco': '2.200,00'},
+            {'nome': 'Samsung', 'preco': '4.200,00'},
+        ]
+    }
+    return render(request, 'index.html',context)
 
 
 def celulares(request):
-    return HttpResponse('Página de celulares')
+    return render(request, 'celulares.html')
