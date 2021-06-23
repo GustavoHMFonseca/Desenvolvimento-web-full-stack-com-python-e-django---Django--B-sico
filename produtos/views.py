@@ -13,7 +13,7 @@ def index(request):
     context = {
         'nome': 'Gustavo Fonseca',
         'ultimo_acesso': '10/10/2030',
-        'idade':15,
+        'idade': 15,
         'produtos': [
             {'nome': 'Notebook Acer', 'preco': '1.200,00'},
             {'nome': 'Iphone', 'preco': '2.200,00'},
@@ -25,3 +25,7 @@ def index(request):
 
 def celulares(request):
     return render(request, 'celulares.html')
+
+
+def moveis(request):
+    return render(request, 'moveis.html')
