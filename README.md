@@ -1,0 +1,1 @@
+Arquivos da seção django básico do curso de Desenvolvimento Web.
